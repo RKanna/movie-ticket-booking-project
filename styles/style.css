@@ -58,9 +58,10 @@ body {
 .seat {
   width: 2rem;
   height: 2rem;
-  background-color: aqua;
+  background-color: white;
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
+  cursor: pointer;
 }
 .seat-status-container {
   width: 23rem;
@@ -99,4 +100,16 @@ body {
 }
 .count-total-container {
   margin-top: 2rem;
+}
+.pick {
+  font-size: larger;
+}
+.for-selected-seat {
+  background-color: var(--clr-brussian-blue);
+}
+.for-occupied-seat {
+  background-color: gray;
+}
+.for-selected-seat2 {
+  background-color: rgb(1, 17, 41);
 }
