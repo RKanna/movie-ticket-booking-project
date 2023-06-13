@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --clr-sky-blue: #8ecae6ff;
+  --clr-blue-green: #219ebcff;
+  --clr-brussian-blue: #023047ff;
+  --clr-selective-yellow: #ffb703ff;
+  --clr-ut-orange: #fb8500ff;
+  --light-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+body {
+  font-family: "Roboto", sans-serif;
+  min-width: 100vh;
+  min-height: 100vh;
+  background-color: var(--clr-brussian-blue);
+}
+.entire-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.movie-price {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.pick-movie-container {
+  padding-bottom: 2rem;
+}
+.screen-container {
+  width: 27rem;
+  height: 7rem;
+  background-color: white;
+  box-shadow: var(--dark-shadow);
+  border-radius: 1rem;
+}
+.seat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+.seat-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.seat {
+  width: 2rem;
+  height: 2rem;
+  background-color: aqua;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+.seat-status-container {
+  width: 23rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background-color: var(--clr-blue-green);
+  border-radius: 0.5rem;
+}
+.row-seat-status {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-left: -4rem;
+}
+.seat1 {
+  width: 1.7rem;
+  height: 1.7rem;
+  background-color: aqua;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.status-seat {
+  margin-left: 2.2rem;
+}
+.count-total-container {
+  margin-top: 2rem;
+}
