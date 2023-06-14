@@ -87,7 +87,7 @@ body {
 .seat1 {
   width: 1.7rem;
   height: 1.7rem;
-  background-color: aqua;
+  background-color: white;
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
   display: flex;
