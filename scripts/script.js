@@ -11,13 +11,18 @@ seatTwo.forEach((element) => {
 });
 let moviePriceElement = document.getElementById("movie-price");
 
-console.log(seatOne);
+// console.log(seatOne);
 //btns
 
 //container
 let price;
+let seatCount = 0;
+let total;
 moviePriceElement.addEventListener("change", () => {
   price = moviePriceElement.value;
+  total = seatCount * price;
+  countEl.innerText = ` ${seatCount} `;
+  totalEl.innerText = ` ₹ ${total}`;
   console.log(price);
 });
 
@@ -31,8 +36,8 @@ let seatMain = document.querySelectorAll(".seat");
 //   });
 // });
 
-let countEl = document.getElementsByClassName("count");
-let totalEl = document.getElementsByClassName("total");
+let countEl = document.getElementById("count");
+let totalEl = document.getElementById("total");
 let ElementCountNumber;
 for (let i = 0; i < seatMain.length; i++) {
   seatMain[i].addEventListener("click", () => {
@@ -40,12 +45,30 @@ for (let i = 0; i < seatMain.length; i++) {
     seatMain[i].classList.toggle("for-selected-seat2");
     let ElementCountNumber = i;
 
-    console.log(ElementCountNumber);
+    // console.log(ElementCountNumber);
+
+    let seatCount = document.querySelectorAll(
+      ".seat.for-selected-seat2"
+    ).length;
+    console.log(seatCount);
+    countEl.innerText = ` ${seatCount} `;
+    total = price * seatCount;
+    totalEl.innerText = ` ₹ ${total}`;
   });
 }
 // if (seatMain[i].classList.toggle === true) {
 //   countEl.innerText = `${ElementCountNumber}`;
 // }
+
+const init = function () {
+  price = moviePriceElement.value;
+  console.log(price);
+  seatCount = 0;
+  total = seatCount * price;
+  countEl.innerText = ` ${seatCount} `;
+  totalEl.innerText = ` ₹ ${total}`;
+};
+init();
 const seatMainExcept = document.querySelectorAll(
   "#seat-2,#seat-3,#seat-5,#seat-6,#seat-7,#seat10,#seat11:not(.seat)"
 );
@@ -55,7 +78,7 @@ seatMainExcept.forEach((element) => {
 seatMainExcept.forEach((element) => {
   element.style.pointerEvents = "none";
 });
-console.log(seatMainExcept);
+// console.log(seatMainExcept);
 //for selecting all buttons at once
 
 //creating function
