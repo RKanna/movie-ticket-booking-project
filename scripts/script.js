@@ -15,16 +15,6 @@ let moviePriceElement = document.getElementById("movie-price");
 //btns
 
 //container
-let price;
-let seatCount = 0;
-let total;
-moviePriceElement.addEventListener("change", () => {
-  price = moviePriceElement.value;
-  total = seatCount * price;
-  countEl.innerText = ` ${seatCount} `;
-  totalEl.innerText = ` ₹ ${total}`;
-  console.log(price);
-});
 
 let seatMain = document.querySelectorAll(".seat");
 
@@ -39,6 +29,7 @@ let seatMain = document.querySelectorAll(".seat");
 let countEl = document.getElementById("count");
 let totalEl = document.getElementById("total");
 let ElementCountNumber;
+
 for (let i = 0; i < seatMain.length; i++) {
   seatMain[i].addEventListener("click", () => {
     // seatMain[i].classList.add("for-selected-seat2");
@@ -56,9 +47,22 @@ for (let i = 0; i < seatMain.length; i++) {
     totalEl.innerText = ` ₹ ${total}`;
   });
 }
+
 // if (seatMain[i].classList.toggle === true) {
 //   countEl.innerText = `${ElementCountNumber}`;
 // }
+
+let price;
+let seatCount;
+let total;
+const changeHappen = moviePriceElement.addEventListener("change", () => {
+  price = moviePriceElement.value;
+  let seatCount = document.querySelectorAll(".seat.for-selected-seat2").length;
+  total = seatCount * price;
+  countEl.innerText = ` ${seatCount} `;
+  totalEl.innerText = ` ₹ ${total}`;
+  console.log(price);
+});
 
 const init = function () {
   price = moviePriceElement.value;
